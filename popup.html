@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Job Autofill — naiem.iam.bd</title>
+  <style>
+    body { width: 360px; margin: 0; padding: 14px; box-sizing: border-box; font: 13px 'Segoe UI', sans-serif; color: #243447; background: #f5f7fa; }
+    h2 { margin: 0 0 4px; font-size: 18px; } .sub { margin: 0 0 14px; color: #5f6b76; font-size: 11px; }
+    .privacy { padding: 9px; margin-bottom: 12px; border: 1px solid #b7dfc5; border-radius: 7px; color: #146c43; background: #e9f7ef; font-size: 11px; }
+    .card { padding: 12px; margin-bottom: 12px; border: 1px solid #e1e6eb; border-radius: 8px; background: #fff; }
+    .card-title { margin: 0 0 8px; font-weight: 700; font-size: 12px; }
+    button { width: 100%; padding: 9px 7px; border: 0; border-radius: 6px; color: #fff; cursor: pointer; font-weight: 700; font-size: 12px; }
+    button:hover { filter: brightness(.95); } .job { background: #0d6efd; } .autofill { margin-top: 10px; background: #6f42c1; }
+    .tools { display: flex; gap: 8px; margin-top: 10px; } .tools button { flex: 1; } .export { background: #198754; } .import { background: #6c757d; }
+    #profileList { min-height: 44px; max-height: 190px; overflow-y: auto; border: 1px solid #e6e9ed; border-radius: 6px; }
+    .empty { padding: 14px; color: #89939e; text-align: center; font-size: 12px; }
+    .profile { display: flex; align-items: center; gap: 7px; padding: 8px; border-bottom: 1px solid #edf0f2; cursor: pointer; } .profile:last-child { border-bottom: 0; } .profile.selected { background: #edf3ff; }
+    .profile-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .badge { padding: 2px 5px; border-radius: 4px; color: #fff; background: #0d6efd; font-size: 9px; font-weight: 700; }
+    .edit, .delete { width: auto; padding: 4px 6px; font-size: 10px; } .edit { background: #f0ad00; color: #222; } .delete { background: #dc3545; }
+    #status { min-height: 16px; color: #146c43; text-align: center; font-size: 11px; }
+    .copyright { margin-top: 14px; padding-top: 9px; border-top: 1px solid #e1e6eb; color: #6c757d; text-align: center; font-size: 10px; line-height: 1.5; }
+    .copyright a { color: #0d6efd; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h2>Personal Job Autofill</h2>
+  <p class="sub">Teletalk Job only — local-only personal version.</p>
+  <div class="privacy"><strong>Privacy:</strong> profiles stay only in this browser's extension storage. No document upload or external login.</div>
+  <div class="card">
+    <div class="card-title">Create a profile</div>
+    <button id="newJob" class="job">New Teletalk Job Profile</button>
+    <div class="tools"><button id="importProfiles" class="import">Import JSON</button><button id="exportProfiles" class="export">Export JSON</button></div>
+    <input id="importFile" type="file" accept="application/json,.json" hidden>
+  </div>
+  <div class="card">
+    <div class="card-title">Saved job profiles</div>
+    <div id="profileList"></div>
+    <button id="autofill" class="autofill">AUTOFILL SELECTED JOB PROFILE</button>
+  </div>
+  <div id="status"></div>
+  <div class="copyright">© 2026 <strong>naiem.iam.bd</strong> — Personal Job Autofill<br><a href="https://naiem.iam.bd" target="_blank" rel="noopener">naiem.iam.bd</a></div>
+  <script src="popup.js"></script>
+</body>
+</html>

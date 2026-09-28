@@ -1,0 +1,8 @@
+Copyright (c) 2026 naiem.iam.bd
+Website: https://naiem.iam.bd
+
+Personal Job Autofill is a private local-only extension created and maintained by naiem.iam.bd.
+
+All rights reserved unless written permission is granted by the copyright holder.
+Unauthorized redistribution, rebranding, commercial use, or publication of modified copies is not permitted.
+This notice does not make the source code technically unmodifiable; browser extensions can be inspected and changed by the person who has the files.

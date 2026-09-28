@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Personal Job Autofill — naiem.iam.bd",
+  "version": "1.1.0",
+  "description": "Private local-only Teletalk job autofill by naiem.iam.bd.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://*.teletalk.com.bd/*"],
+  "action": {"default_popup": "popup.html"}
+}

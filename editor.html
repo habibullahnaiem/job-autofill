@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Job Profile Editor — naiem.iam.bd</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header & Actions */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #1a73e8;
+            font-size: 22px;
+        }
+
+        .header .meta {
+            font-size: 12px;
+            color: #666;
+            background: #eee;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .btn-save {
+            background: #198754;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #157347;
+        }
+
+        .btn-del {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-del:hover {
+            background: #bb2d3b;
+        }
+
+        #status {
+            font-weight: bold;
+            color: #198754;
+            margin-right: 10px;
+        }
+
+        /* Form Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        fieldset {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+
+        legend {
+            font-weight: 700;
+            color: #444;
+            padding: 0 8px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .field-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .field-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #1a73e8;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+        }
+
+        /* Education Blocks (Job Only) */
+        .edu-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .edu-item h4 {
+            margin: 0 0 10px 0;
+            font-size: 13px;
+            color: #1a73e8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div style="display:flex; align-items:center;">
+                <h2>✏️ Edit Profile</h2>
+                <span id="profileTypeBadge" class="meta">LOADING...</span>
+            </div>
+            <div class="actions">
+                <span id="status"></span>
+                <button id="deleteBtn" class="btn-del">🗑️ Delete</button>
+                <button id="saveBtn" class="btn-save">💾 Save Changes</button>
+            </div>
+        </div>
+
+        <div id="editorContent">
+        </div>
+        <div style="margin:24px 0 8px; padding-top:10px; border-top:1px solid #e1e6eb; color:#6c757d; text-align:center; font-size:11px;">
+            © 2026 <strong>naiem.iam.bd</strong> — Personal Job Autofill · <a href="https://naiem.iam.bd" target="_blank" rel="noopener">naiem.iam.bd</a>
+        </div>
+    </div>
+    <script src="editor.js"></script>
+</body>
+
+</html>
